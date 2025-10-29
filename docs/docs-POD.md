@@ -1,6 +1,8 @@
 ## Proper orthogonal decomposition (POD)
-The proper orthogonal decomposition is introduced here in the general context of approximation theory following \workofcite{article:Chatterjee2000}, \workofcite{book:Rivlin1981} and \workofcite{article:Cordier2003}.
-Obtaining a compact representation of data may be pursued with the multi-variate statistical method known as \emph{proper orthogonal decomposition} (POD). The target of the procedure is to reduce the number of intercorrelated variables to a smaller set of uncorrelated variables while retaining as much of the variation in the initial variables, that is finding a representing subspace of fixed dimension which is optimal in the sense that the error in the projection onto this subspace is minimized. This serves the twofold cause of order reduction and feature extraction of the so called \emph{coherent structures}. Let $$\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$$ be a set of observations of a random process over a spatial domain $`\Omega`$. A coherent structure, as defined by \workofcite{book:Lumley1970}, is a deterministic function $\boldsymbol{\phi}$ which is best correlated, on average, with the realizations of $\boldsymbol{d}$. In other words, the functions $\boldsymbol{\phi}$ are those functions that possess the largest mean-square projection on the observations $\boldsymbol{d}$, that is $\lvert \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle \rvert^{2}$. The interest on the functions $\boldsymbol{\phi}$ is in their spatial structures, so the amplitude of these functions should not be of impact on the choice, hence they are chosen to be normalised as $\lVert \boldsymbol{\phi} \rVert^{2}=1$ and the projection itself must be normalised by the norm of the the function. One can define a subspace $S$ spanned by a set of coherent structures $\boldsymbol{\phi}_{j}$, with $j=1,\ldots,n$ and thus defining the projection of $\boldsymbol{d}$ onto $S$ as
+The proper orthogonal decomposition is introduced here in the general context of approximation theory following Chatterjee (2000), Rivlin (1969) and Cordier and Bergmann (2003).
+Obtaining a compact representation of data may be pursued with the multi-variate statistical method known as \emph{proper orthogonal decomposition} (POD). The target of the procedure is to reduce the number of intercorrelated variables to a smaller set of uncorrelated variables while retaining as much of the variation in the initial variables, that is finding a representing subspace of fixed dimension which is optimal in the sense that the error in the projection onto this subspace is minimized. This serves the twofold cause of order reduction and feature extraction of the so called \emph{coherent structures}. Let 
+$$\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$$ 
+be a set of observations of a random process over a spatial domain $\Omega$. A coherent structure, as defined by \workofcite{book:Lumley1970}, is a deterministic function $\boldsymbol{\phi}$ which is best correlated, on average, with the realizations of $\boldsymbol{d}$. In other words, the functions $\boldsymbol{\phi}$ are those functions that possess the largest mean-square projection on the observations $\boldsymbol{d}$, that is $\lvert \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle \rvert^{2}$. The interest on the functions $\boldsymbol{\phi}$ is in their spatial structures, so the amplitude of these functions should not be of impact on the choice, hence they are chosen to be normalised as $\lVert \boldsymbol{\phi} \rVert^{2}=1$ and the projection itself must be normalised by the norm of the the function. One can define a subspace $S$ spanned by a set of coherent structures $\boldsymbol{\phi}_{j}$, with $j=1,\ldots,n$ and thus defining the projection of $\boldsymbol{d}$ onto $S$ as
 \begin{equation}\label{eq:pod_projection}
 	P_{_{S}}\boldsymbol{d} = \sum_{j=1}^{n} \dfrac{\langle\boldsymbol{d},\boldsymbol{\phi}_{j}\rangle}{\lVert\boldsymbol{\phi}_{j}\rVert^{2}}\boldsymbol{\phi}_{j}
 \end{equation}
@@ -123,3 +125,23 @@ If a non centred noise of type $\eqref{eq:NonCentred_LUnoise}$ is considered fav
 	\boldsymbol{\sigma}\left( \boldsymbol{x} \right) \mathrm{d}\mathbf{B}_{t} = - \overline{\boldsymbol{u}}^{\, t}\left( \boldsymbol{x} \right)\mathrm{d}t + \sqrt{\tau}\sum_{k=0}^{N} \lambda^{1/2}_{k}\boldsymbol{\phi}_{k}\left( \boldsymbol{x} \right) \mathrm{d}\beta^{k}_{t},
 \end{equation}
 where $\boldsymbol{\sigma}_t\mathbf{Y}_{t}$ in \eqref{eq:NonCentred_LUnoise} is defined as $\overline{\boldsymbol{u}}^{\, t}$.
+
+
+
+## References
+<a id="1">[1]</a> 
+Chatterjee, A. (2000),
+An introduction to the proper orthogonal decomposition.
+Current Science 78.7, pp. 808–817 [doi](http://www.jstor.org/stable/24103957).
+
+
+<a id="2">[2]</a> 
+Cordier, L. and Bergmann (2003),
+Post-Processing of experimental and numerical data
+[doi](  ).
+
+
+<a id="3">[3]</a> 
+Saad Y. (2003).
+Iterative Methods for Sparse Linear Systems.
+SIAM, Other Titles in Applied Mathematics. [doi](https://doi.org/10.1137/1.9780898718003)
