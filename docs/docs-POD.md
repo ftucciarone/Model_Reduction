@@ -142,6 +142,6 @@ Post-Processing of experimental and numerical data
 
 
 <a id="3">[3]</a> 
-Saad Y. (2003).
-Iterative Methods for Sparse Linear Systems.
-SIAM, Other Titles in Applied Mathematics. [doi](https://doi.org/10.1137/1.9780898718003)
+Rivlin, T. J. (1969). 
+An introduction to the approximation of functions.
+1st ed., Blaisdell, Book in Numerical Analysis and Computer Science, Blaisdell Pub. Co.
