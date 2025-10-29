@@ -1,6 +1,6 @@
 ## Proper orthogonal decomposition (POD)
 The proper orthogonal decomposition is introduced here in the general context of approximation theory following \workofcite{article:Chatterjee2000}, \workofcite{book:Rivlin1981} and \workofcite{article:Cordier2003}.
-Obtaining a compact representation of data may be pursued with the multi-variate statistical method known as \emph{proper orthogonal decomposition} (POD). The target of the procedure is to reduce the number of intercorrelated variables to a smaller set of uncorrelated variables while retaining as much of the variation in the initial variables, that is finding a representing subspace of fixed dimension which is optimal in the sense that the error in the projection onto this subspace is minimized. This serves the twofold cause of order reduction and feature extraction of the so called \emph{coherent structures}. Let $\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$ be a set of observations of a random process over a spatial domain $\Omega$. A coherent structure, as defined by \workofcite{book:Lumley1970}, is a deterministic function $\boldsymbol{\phi}$ which is best correlated, on average, with the realizations of $\boldsymbol{d}$. In other words, the functions $\boldsymbol{\phi}$ are those functions that possess the largest mean-square projection on the observations $\boldsymbol{d}$, that is $\lvert \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle \rvert^{2}$. The interest on the functions $\boldsymbol{\phi}$ is in their spatial structures, so the amplitude of these functions should not be of impact on the choice, hence they are chosen to be normalised as $\lVert \boldsymbol{\phi} \rVert^{2}=1$ and the projection itself must be normalised by the norm of the the function. One can define a subspace $S$ spanned by a set of coherent structures $\boldsymbol{\phi}_{j}$, with $j=1,\ldots,n$ and thus defining the projection of $\boldsymbol{d}$ onto $S$ as
+Obtaining a compact representation of data may be pursued with the multi-variate statistical method known as \emph{proper orthogonal decomposition} (POD). The target of the procedure is to reduce the number of intercorrelated variables to a smaller set of uncorrelated variables while retaining as much of the variation in the initial variables, that is finding a representing subspace of fixed dimension which is optimal in the sense that the error in the projection onto this subspace is minimized. This serves the twofold cause of order reduction and feature extraction of the so called \emph{coherent structures}. Let $$\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$$ be a set of observations of a random process over a spatial domain $`\Omega`$. A coherent structure, as defined by \workofcite{book:Lumley1970}, is a deterministic function $\boldsymbol{\phi}$ which is best correlated, on average, with the realizations of $\boldsymbol{d}$. In other words, the functions $\boldsymbol{\phi}$ are those functions that possess the largest mean-square projection on the observations $\boldsymbol{d}$, that is $\lvert \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle \rvert^{2}$. The interest on the functions $\boldsymbol{\phi}$ is in their spatial structures, so the amplitude of these functions should not be of impact on the choice, hence they are chosen to be normalised as $\lVert \boldsymbol{\phi} \rVert^{2}=1$ and the projection itself must be normalised by the norm of the the function. One can define a subspace $S$ spanned by a set of coherent structures $\boldsymbol{\phi}_{j}$, with $j=1,\ldots,n$ and thus defining the projection of $\boldsymbol{d}$ onto $S$ as
 \begin{equation}\label{eq:pod_projection}
 	P_{_{S}}\boldsymbol{d} = \sum_{j=1}^{n} \dfrac{\langle\boldsymbol{d},\boldsymbol{\phi}_{j}\rangle}{\lVert\boldsymbol{\phi}_{j}\rVert^{2}}\boldsymbol{\phi}_{j}
 \end{equation}
@@ -13,7 +13,7 @@ and thus the minimization of the mean square projection of $\boldsymbol{d}$ onto
 where the overbar means averaging in some sense. In particular, proper orthogonal decomposition is designed to minimize the number $n$ of basis functions needed in equation $\eqref{eq:pod_projection}$. 
 %
 %
-\subsection{Mathematical formulation}
+### Mathematical formulation
 In this section, the development of \workofcite{book:Holmes96}, \workofcite{thesis:Rowley2001} and \workofcite{article:Rowley2011} is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}$ and induced norm $\lVert \cdot \rVert_{_{\mathcal{H}}}$. The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \:\colon\: j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
 \begin{equation}\label{eq:pod_maximization}
 	\max_{\boldsymbol{\phi}\in\mathcal{H}}
@@ -103,3 +103,23 @@ is then solved in order to define the temporal structures $\boldsymbol{\psi}\lef
 \begin{equation}\label{eq:spatial_POD}
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
 \end{equation}
+%
+\subsection{Noise ansatz}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\imagewidth]{/Users/Francesco/Documents/These_Tucciarone_all/These_Tucciarone/03_Noise_Models/Figures/poster_POD_alpha0.png}
+	\caption{Outline of the POD noise generation procedure}\label{fig:poster_POD}
+\end{figure}%
+Employing POD on a set of velocity fluctuations of type $\eqref{eq:time_fluctuations}$ or $\eqref{eq:en_scale_time_fluctuations}$ produces a set of velocity modes $\lbrace \boldsymbol{\phi}_{j}\left( \boldsymbol{x} \right), \lambda_{j}, j=1,\ldots,N\rbrace$ that can be used to define the noise ansatz as
+\begin{equation}\label{eq:pod_noise_ansatz}
+	\boldsymbol{\sigma}\left( \boldsymbol{x} \right) \mathrm{d}\mathbf{B}_{t} = \sqrt{\tau}\sum_{k=1}^{N} \lambda^{1/2}_{k} \boldsymbol{\phi}_{k}\left( \boldsymbol{x} \right) \mathrm{d}\beta^{k}_{t}
+\end{equation}
+with associated variance tensor computed as
+\begin{equation}\label{eq:pod_variance_ansatz}
+	\boldsymbol{a}\left( \boldsymbol{x} \right) = \tau \sum_{k=1}^{N} \lambda_{k}\boldsymbol{\phi}_{k}\left( \boldsymbol{x} \right) \boldsymbol{\phi}^{_{\mathrm{T}}}_{k}\left( \boldsymbol{x} \right).
+\end{equation}
+If a non centred noise of type $\eqref{eq:NonCentred_LUnoise}$ is considered favourable, the time average $\overline{\boldsymbol{u}}^{\, t}$ that was removed from the initial data can be re-inserted in the simulation through the Girsanov correction, defining thus the noise as
+\begin{equation}\label{eq:pod_girsenov_noise_ansatz}
+	\boldsymbol{\sigma}\left( \boldsymbol{x} \right) \mathrm{d}\mathbf{B}_{t} = - \overline{\boldsymbol{u}}^{\, t}\left( \boldsymbol{x} \right)\mathrm{d}t + \sqrt{\tau}\sum_{k=0}^{N} \lambda^{1/2}_{k}\boldsymbol{\phi}_{k}\left( \boldsymbol{x} \right) \mathrm{d}\beta^{k}_{t},
+\end{equation}
+where $\boldsymbol{\sigma}_t\mathbf{Y}_{t}$ in \eqref{eq:NonCentred_LUnoise} is defined as $\overline{\boldsymbol{u}}^{\, t}$.
