@@ -12,8 +12,7 @@ and thus the minimization of the mean square projection of $\boldsymbol{d}$ onto
 	\right\rVert^{2}\:}^{_{X}},
 ```
 where the overbar means averaging in some sense. In particular, proper orthogonal decomposition is designed to minimize the number $n$ of basis functions needed in equation $\eqref{eq:pod_projection}$. 
-%
-%
+
 ### Mathematical formulation
 In this section, the development of \workofcite{book:Holmes96}, \workofcite{thesis:Rowley2001} and \workofcite{article:Rowley2011} is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $`\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}`$ and induced norm $`\lVert \cdot \rVert_{_{\mathcal{H}}}`$. The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \:\colon\: j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
 ```math 
@@ -103,10 +102,10 @@ The eigen-problem
 	\boldsymbol{K} \boldsymbol{\Psi} = \boldsymbol{\Psi} \boldsymbol{\Sigma}
 ```
 is then solved in order to define the temporal structures $\boldsymbol{\psi}\left(t\right)$. The corresponding spatial structures are then computed by projection of the data on these temporal structures, that means
-```math \label{eq:spatial_POD}
+```math \label{eq:spatial_POD} \tag{a}
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
 ```
-%
+\eqref{eq:spatial_POD}
 
 
 
