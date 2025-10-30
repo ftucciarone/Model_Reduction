@@ -93,7 +93,7 @@ that means that the coefficients $\alpha^{(n)}$ are mutually uncorrelated and th
 where $E$ represents in the case of fluids with velocity field $\boldsymbol{d}$, the Turbulent Kinetic Energy (TKE) integrated over the domain $\Omega$.
 %
 ## Algorithmic approach
-Starting from the the formalism introduced in section \ref{sect:data_decomposition}, the experimental data is organized into a matrix $\boldsymbol{D}_{i,k}$ as explained in equation \eqref{eq:data_structure}. The temporal correlation matrix $`\boldsymbol{K}=\boldsymbol{D}^{\dagger}\boldsymbol{D}\in\mathbb{R}^{n_{t}\times n_{t}}`$ is then computed as
+Starting from the the formalism introduced in section \ref{sect:data_decomposition}, the experimental data is organized into a matrix $\boldsymbol{D}_{i,k}$ as explained in equation $\eqref{eq:data_structure}$. The temporal correlation matrix $`\boldsymbol{K}=\boldsymbol{D}^{\dagger}\boldsymbol{D}\in\mathbb{R}^{n_{t}\times n_{t}}`$ is then computed as
 ```math 
 	\boldsymbol{K}_{ij}=\int_{\Omega} \boldsymbol{d}^{\dagger}\left(\boldsymbol{x},t_{i}\right) \boldsymbol{d}\left(\boldsymbol{x},t_{j}\right)\,\mathrm{d}\boldsymbol{x}.
 ```
@@ -106,8 +106,6 @@ is then solved in order to define the temporal structures $\boldsymbol{\psi}\lef
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
 	\label{eq:spatial_POD}
 ```
-$\eqref{eq:spatial_POD}$
-
 
 
 ## References
