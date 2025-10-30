@@ -26,13 +26,15 @@ subject to the constraint $\lVert \boldsymbol{\phi}\lVert^{2}=1$, to close the p
 	\mathcal{J}\left[\boldsymbol{\phi}\right] = \overline{\:\lvert\langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\rvert^{2}\:}^{_{X}} - \lambda\left(\lVert\boldsymbol{\phi}\rVert^{2}_{_{\mathcal{H}}}-1\right),
 ```
 including the constraint through a Lagrange multiplier. A Gateaux derivative is performed to set to zero the infinitesimal variations $\boldsymbol{\phi} + \epsilon\boldsymbol{\psi}\in\mathcal{H}$, with $\epsilon\in\mathbb{R}$, that means
-```math 
-	\dfrac{\mathrm{d}}{\mathrm{d}\epsilon}\mathcal{J}\left[\boldsymbol{\phi} + \epsilon\boldsymbol{\psi}\right]=
-	\left.\dfrac{\mathrm{d}}{\mathrm{d}\epsilon}\left[
-	\overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}} \langle\boldsymbol{d},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}\:}^{_{X}}
-	- \lambda\langle\boldsymbol{\phi}+\epsilon\boldsymbol{\psi},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}
-	\right]\right|_{\epsilon=0}\\
-=2\overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\langle\boldsymbol{d},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}\:}^{_{X}} - 2\lambda\langle\boldsymbol{\phi},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}=0.
+```math
+	\begin{aligned}
+		\dfrac{\mathrm{d}}{\mathrm{d}\epsilon}\mathcal{J}\left[\boldsymbol{\phi} + \epsilon\boldsymbol{\psi}\right]&=
+		\left.\dfrac{\mathrm{d}}{\mathrm{d}\epsilon}\left[
+		\overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}} \langle\boldsymbol{d},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}\:}^{_{X}}
+		- \lambda\langle\boldsymbol{\phi}+\epsilon\boldsymbol{\psi},\boldsymbol{\phi}+\epsilon\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}
+		\right]\right|_{\epsilon=0}\\
+	&=2\overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\langle\boldsymbol{d},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}\:}^{_{X}} - 2\lambda\langle\boldsymbol{\phi},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}=0.
+	\end{aligned}
 ```
 Assuming commutation is possible between the averaging $\overline{\:\cdot\:}^{_{X}}$ and the inner product $\langle \cdot, \cdot\rangle_{_{\mathcal{H}}}$ one has
 ```math 
