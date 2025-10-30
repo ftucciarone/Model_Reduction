@@ -36,7 +36,7 @@ including the constraint through a Lagrange multiplier. A Gateaux derivative is 
 	&=2\overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\langle\boldsymbol{d},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}\:}^{_{X}} - 2\lambda\langle\boldsymbol{\phi},\boldsymbol{\psi}\rangle_{_{\mathcal{H}}}=0.
 	\end{aligned}
 ```
-Assuming commutation is possible between the averaging $\overline{\:\cdot\:}^{_{X}}$ and the inner product $\langle \cdot, \cdot\rangle_{_{\mathcal{H}}}$ one has
+Assuming commutation is possible between the averaging $`\overline{\:\cdot\:}^{_{X}}`$ and the inner product $`\langle \cdot, \cdot\rangle_{_{\mathcal{H}}}`$ one has
 ```math 
 	\left\langle \: \overline{ \langle \boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}} \boldsymbol{d}\:}^{_{X}} -   
 	\lambda\boldsymbol{\phi} ,\boldsymbol{\psi}\right\rangle_{_{\mathcal{H}}}=0
@@ -45,10 +45,12 @@ corresponding to the eigenproblem
 ```math 
 	\mathcal{R}\boldsymbol{\phi} = \lambda \boldsymbol{\phi}
 ```
-where $\mathcal{R}\boldsymbol{\phi} = \overline{ \langle \boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}} \boldsymbol{d}\:}^{_{X}}$. Considering the case where the Hilbert space $\mathcal{H}$ is $L^{2}$, a natural case in fluid mechanics as it represents functions with finite kinetic energy, the linear operator $\mathcal{R}\boldsymbol{\phi}$ is
-```math 
-	\mathcal{R}\boldsymbol{\phi} &= \overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{L^{2}}} \boldsymbol{d} \:}^{_{X}} = \overline{\: \int_{\Omega}\boldsymbol{d}\left(\boldsymbol{\xi},t\right)\boldsymbol{\phi}\left(\boldsymbol{\xi}\right)\,\mathrm{d}\boldsymbol{\xi} \: \boldsymbol{d}\left(\boldsymbol{x},t\right) \:}^{_{X}}\\
-	&= \int_{\Omega} \overline{\: \boldsymbol{d}\left(\boldsymbol{\xi},t\right)\boldsymbol{d}\left(\boldsymbol{x},t\right)\:}^{_{X}} \boldsymbol{\phi}\left(\boldsymbol{\xi}\right)\mathrm{d}\boldsymbol{\xi}.
+where $`\mathcal{R}\boldsymbol{\phi} = \overline{ \langle \boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}} \boldsymbol{d}\:}^{_{X}}`$. Considering the case where the Hilbert space $\mathcal{H}$ is $L^{2}$, a natural case in fluid mechanics as it represents functions with finite kinetic energy, the linear operator $\mathcal{R}\boldsymbol{\phi}$ is
+```math
+	\begin{aligned}
+		\mathcal{R}\boldsymbol{\phi} &= \overline{\: \langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{L^{2}}} \boldsymbol{d} \:}^{_{X}} = \overline{\: \int_{\Omega}\boldsymbol{d}\left(\boldsymbol{\xi},t\right)\boldsymbol{\phi}\left(\boldsymbol{\xi}\right)\,\mathrm{d}\boldsymbol{\xi} \: \boldsymbol{d}\left(\boldsymbol{x},t\right) \:}^{_{X}}\\
+		&= \int_{\Omega} \overline{\: \boldsymbol{d}\left(\boldsymbol{\xi},t\right)\boldsymbol{d}\left(\boldsymbol{x},t\right)\:}^{_{X}} \boldsymbol{\phi}\left(\boldsymbol{\xi}\right)\mathrm{d}\boldsymbol{\xi}.
+	\end{aligned}
 ```
 that is the $X-$averaged two points autocorrelation function of $\boldsymbol{d}$. The functions are orthogonal in the sense that 
 ```math 
@@ -59,40 +61,38 @@ It is crucial to notice that the temporally averaged quantity corresponds to the
 
 \subsection{Properties of the decomposition}
 In the following, properties of the proper orthogonal decomposition are listed. The proves of these statements are now classical and can be found in the literature.
-\begin{itemize}
-\item For a given a bounded domain, Hilbert-Schmidt theory applies and states that the eigenproblem has a denumerable set of solutions satisfying 
-```math 
-	\sum_{j=1}^{d} \int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \phi_{j}^{(n)} \left( \boldsymbol{x}^{\prime} \right) \mathrm{d}\boldsymbol{x}^{\prime} = \lambda^{(n)} \phi_{i}^{(n)}\left(\boldsymbol{x}\right)
-```
-where $\lambda^{(n)}$ and $\boldsymbol{\phi}^{(n)}_{i}$ represent respectively the eigenvalue and eigenfunction of order $n \geq 1$. Each eigenfunction is solution of the maximization problem $\eqref{eq:pod_maximization}$ with the additional constraint of being orthogonal to all previous eigenfunctions.
-\item $\mathcal{R}$ can be shown to be self-adjoint and non negative, so that all eigenvalues are positive, real and converging, that is
-```math 
-	\lambda^{(1)} \geq \lambda^{(2)} \geq \lambda^{(3)} \geq \ldots \geq 0, \quad \text{with} \quad \sum_{n=1}^{\infty}\lambda^{(n)} < +\infty.
-```
-\item The set of eigenfunction $\boldsymbol{\phi}^{(n)}$ form a complete orthogonal set, meaning that almost every member of the set $\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$ can be reconstructed as
-```math 
-	\boldsymbol{d}\left(\boldsymbol{x},t\right) = \sum_{n=1}^{\infty} \alpha^{(n)}\left( t \right) \boldsymbol{\phi}^{(n)}\left( \boldsymbol{x} \right)
-```
-where $\alpha^{(n)}$, projections of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, can be computed through the orthogonality of the eigenfunctions $\boldsymbol{\phi}$ as
-```math 
-	\alpha^{(n)}\left( t \right) = \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle_{_{\mathcal{H}}} = \sum_{i=1}^{d}\int_{\Omega} u_{i}\left( \boldsymbol{x},t \right) \phi_{i}^{\dagger (n)}\left(\boldsymbol{x}\right) \, \mathrm{d}\boldsymbol{x}.
-```
-\item Mercer's theorem: the two points correlation tensor $R_{ij}$ can be written as a uniformly convergent series 
-```math 
-	R_{ij\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right)} = \sum_{n=1}^{\infty} \lambda^{(n)} \phi_{i}^{(n)}\left( \boldsymbol{x} \right) \phi_{j}^{\dagger (n)}\left( \boldsymbol{x}^{\prime} \right).
-```
-\item Stemming from the diagonal representation of $R_{ij}$, the decomposition of $\boldsymbol{d}$ on the eigenfunctions $\boldsymbol{\phi}$ and their orthogonality, one has that 
-```math 
-	\overline{\alpha^{(n)}\alpha^{\dagger(m)}}^{_{X}} = \delta_{nm}\lambda^{(n)},
-```
-that means that the coefficients $\alpha^{(n)}$ are mutually uncorrelated and their mean square value are the eignevalues themselves.
-\item From Mercer's theorem and orthonormality of $\boldsymbol{\phi}^{(n)}$ one can write
-```math 
-	\sum_{i=1}^{d}\int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \, \mathrm{d}\boldsymbol{x} = 
-	\sum_{n=1}^{\infty} \lambda^{(n)} = E,
-```
-where $E$ represents in the case of fluids with velocity field $\boldsymbol{d}$, the Turbulent Kinetic Energy (TKE) integrated over the domain $\Omega$.
-\end{itemize}
+	* For a given a bounded domain, Hilbert-Schmidt theory applies and states that the eigenproblem has a denumerable set of solutions satisfying 
+	```math 
+		\sum_{j=1}^{d} \int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \phi_{j}^{(n)} \left( \boldsymbol{x}^{\prime} \right) \mathrm{d}\boldsymbol{x}^{\prime} = \lambda^{(n)} \phi_{i}^{(n)}\left(\boldsymbol{x}\right)
+	```
+	where $\lambda^{(n)}$ and $\boldsymbol{\phi}^{(n)}_{i}$ represent respectively the eigenvalue and eigenfunction of order $n \geq 1$. Each eigenfunction is solution of the maximization problem $\eqref{eq:pod_maximization}$ with the additional constraint of being orthogonal to all previous eigenfunctions.
+	* $\mathcal{R}$ can be shown to be self-adjoint and non negative, so that all eigenvalues are positive, real and converging, that is
+	```math 
+		\lambda^{(1)} \geq \lambda^{(2)} \geq \lambda^{(3)} \geq \ldots \geq 0, \quad \text{with} \quad \sum_{n=1}^{\infty}\lambda^{(n)} < +\infty.
+	```
+	* The set of eigenfunction $\boldsymbol{\phi}^{(n)}$ form a complete orthogonal set, meaning that almost every member of the set $\left\lbrace \boldsymbol{d}\left(\boldsymbol{x},t\right), \: \boldsymbol{x}\in\Omega, t\in\mathbb{R}^{+} \right\rbrace$ can be reconstructed as
+	```math 
+		\boldsymbol{d}\left(\boldsymbol{x},t\right) = \sum_{n=1}^{\infty} \alpha^{(n)}\left( t \right) \boldsymbol{\phi}^{(n)}\left( \boldsymbol{x} \right)
+	```
+	where $\alpha^{(n)}$, projections of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, can be computed through the orthogonality of the eigenfunctions $\boldsymbol{\phi}$ as
+	```math 
+		\alpha^{(n)}\left( t \right) = \langle \boldsymbol{d}, \boldsymbol{\phi} \rangle_{_{\mathcal{H}}} = \sum_{i=1}^{d}\int_{\Omega} u_{i}\left( \boldsymbol{x},t \right) \phi_{i}^{\dagger (n)}\left(\boldsymbol{x}\right) \, \mathrm{d}\boldsymbol{x}.
+	```
+	* Mercer's theorem: the two points correlation tensor $R_{ij}$ can be written as a uniformly convergent series 
+	```math 
+		R_{ij\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right)} = \sum_{n=1}^{\infty} \lambda^{(n)} \phi_{i}^{(n)}\left( \boldsymbol{x} \right) \phi_{j}^{\dagger (n)}\left( \boldsymbol{x}^{\prime} \right).
+	```
+	* Stemming from the diagonal representation of $R_{ij}$, the decomposition of $\boldsymbol{d}$ on the eigenfunctions $\boldsymbol{\phi}$ and their orthogonality, one has that 
+	```math 
+		\overline{\alpha^{(n)}\alpha^{\dagger(m)}}^{_{X}} = \delta_{nm}\lambda^{(n)},
+	```
+	that means that the coefficients $\alpha^{(n)}$ are mutually uncorrelated and their mean square value are the eignevalues themselves.
+	* From Mercer's theorem and orthonormality of $\boldsymbol{\phi}^{(n)}$ one can write
+	```math 
+		\sum_{i=1}^{d}\int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \, \mathrm{d}\boldsymbol{x} = 
+		\sum_{n=1}^{\infty} \lambda^{(n)} = E,
+	```
+	where $E$ represents in the case of fluids with velocity field $\boldsymbol{d}$, the Turbulent Kinetic Energy (TKE) integrated over the domain $\Omega$.
 %
 \subsection{Algorithmic approach}
 Starting from the the formalism introduced in section \ref{sect:data_decomposition}, the experimental data is organized into a matrix $\boldsymbol{D}_{i,k}$ as explained in equation \eqref{eq:data_structure}. The temporal correlation matrix $\boldsymbol{K}=\boldsymbol{D}^{\dagger}\boldsymbol{D}\in\mathbb{R}^{n_{t}\times n_{t}}$ is then computed as
