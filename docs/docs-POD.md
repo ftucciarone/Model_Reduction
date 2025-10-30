@@ -15,10 +15,10 @@ where the overbar means averaging in some sense. In particular, proper orthogona
 %
 ### Mathematical formulation
 In this section, the development of \workofcite{book:Holmes96}, \workofcite{thesis:Rowley2001} and \workofcite{article:Rowley2011} is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}$ and induced norm $\lVert \cdot \rVert_{_{\mathcal{H}}}$. The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \:\colon\: j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
-$$`
+```math
 	\max_{\boldsymbol{\phi}\in\mathcal{H}}
 	\dfrac{\overline{\:\lvert\langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\rvert^{2}\:}^{_{X}}}{\lVert\boldsymbol{\phi}\rVert^{2}_{_{\mathcal{H}}}},
-`$$
+```
 subject to the constraint $\lVert \boldsymbol{\phi}\lVert^{2}=1$, to close the problem. A functional $\mathcal{J}\left[\boldsymbol{\phi}\right]$ can be defined as 
 $$`
 	\mathcal{J}\left[\boldsymbol{\phi}\right] = \overline{\:\lvert\langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\rvert^{2}\:}^{_{X}} - \lambda\left(\lVert\boldsymbol{\phi}\rVert^{2}_{_{\mathcal{H}}}-1\right),
