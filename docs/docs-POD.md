@@ -102,8 +102,9 @@ The eigen-problem
 	\boldsymbol{K} \boldsymbol{\Psi} = \boldsymbol{\Psi} \boldsymbol{\Sigma}
 ```
 is then solved in order to define the temporal structures $\boldsymbol{\psi}\left(t\right)$. The corresponding spatial structures are then computed by projection of the data on these temporal structures, that means
-```math \label{eq:spatial_POD} \tag{a}
+```math 
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
+	\label{eq:spatial_POD} \tag{a}
 ```
 \eqref{eq:spatial_POD}
 
