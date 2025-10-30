@@ -106,7 +106,7 @@ is then solved in order to define the temporal structures $\boldsymbol{\psi}\lef
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
 	\label{eq:spatial_POD} \tag{a}
 ```
-\eqref{eq:spatial_POD}
+$\eqref{eq:spatial_POD}$
 
 
 
