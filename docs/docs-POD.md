@@ -104,7 +104,7 @@ The eigen-problem
 is then solved in order to define the temporal structures $\boldsymbol{\psi}\left(t\right)$. The corresponding spatial structures are then computed by projection of the data on these temporal structures, that means
 ```math 
 	\boldsymbol{\phi}_{i}\left(\boldsymbol{x}\right) = \dfrac{1}{T} \int_{T} \boldsymbol{d}\left(\boldsymbol{x},t\right) \boldsymbol{\psi}_{i} \left( t\right) \,\mathrm{d}t
-	\label{eq:spatial_POD} \tag{a}
+	\label{eq:spatial_POD}
 ```
 $\eqref{eq:spatial_POD}$
 
