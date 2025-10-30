@@ -14,7 +14,7 @@ and thus the minimization of the mean square projection of $\boldsymbol{d}$ onto
 where the overbar means averaging in some sense. In particular, proper orthogonal decomposition is designed to minimize the number $n$ of basis functions needed in equation $\eqref{eq:pod_projection}$. 
 
 ### Mathematical formulation
-In this section, the development of Holmes (1996), Rowley (2001) and Rowley (2011) is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $`\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}`$ and induced norm $`\lVert \cdot \rVert_{_{\mathcal{H}}}`$. The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \:\colon\: j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
+In this section, the development of Holmes (1996), Rowley (2001) and Rowley (2011) is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $`\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}`$ and induced norm $`\lVert \cdot \rVert_{_{\mathcal{H}}}`$. The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \,\colon\, j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
 ```math 
 	\max_{\boldsymbol{\phi}\in\mathcal{H}}
 	\dfrac{\overline{\:\lvert\langle\boldsymbol{d},\boldsymbol{\phi}\rangle_{_{\mathcal{H}}}\rvert^{2}\:}^{_{X}}}{\lVert\boldsymbol{\phi}\rVert^{2}_{_{\mathcal{H}}}},
