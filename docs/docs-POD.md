@@ -110,43 +110,34 @@ is then solved in order to define the temporal structures $\boldsymbol{\psi}\lef
 
 ## References
 <a id="1">[1]</a> 
-Chatterjee, A. (2000),
+Theodore J. **Rivlin** (1969). 
+An introduction to the approximation of functions.
+1st ed., Blaisdell, Book in Numerical Analysis and Computer Science, Blaisdell Pub. Co. [doi](https://doi.org/10.1137/1012069).
+
+<a id="2">[2]</a>  
+Philip **Holmes**, John L. **Lumley**, and Gahl **Berkooz** (1996).
+Turbulence, coherent structures, dynamical systems, and symmetry.
+Cambridge monographs on mechanics, Cambridge University Press. [doi](https://doi.org/10.1017/CBO9780511622700).
+
+<a id="3">[3]</a> 
+Anindya **Chatterjee** (2000),
 An introduction to the proper orthogonal decomposition.
 Current Science 78.7, pp. 808–817 [doi](http://www.jstor.org/stable/24103957).
 
-
-<a id="2">[2]</a> 
-Cordier, L. and Bergmann (2003),
-Post-Processing of experimental and numerical data
-[doi](  ).
-
-
-<a id="3">[3]</a> 
-Rivlin, T. J. (1969). 
-An introduction to the approximation of functions.
-1st ed., Blaisdell, Book in Numerical Analysis and Computer Science, Blaisdell Pub. Co.
-[doi](  ).
-
-
-<a id="4">[4]</a> 
-Holmes, P., J. L. Lumley, and G. Berkooz (1996).
-Turbulence, coherent structures, dynamical systems, and symmetry.
-Cambridge monographs on mechanics, Cambridge University Press.
-[doi](  ).
-
+<a id="4">[4]</a>
+Clarence W. **Rowley** (2002). 
+Modeling, Simulation, and Control of Cavity Flow Oscillations.
+PhD thesis, California Institute of Technology. [pdf](https://apps.dtic.mil/sti/tr/pdf/ADA396436.pdf).
 
 <a id="5">[5]</a> 
-Rowley, C. W. (2002). 
-Modeling, Simulation, and Control of Cavity Flow Oscillations.
-PhD thesis, California Institute of Technology.
-[doi](  ).
-
+Laurent **Cordier** and Michel **Bergmann** (2003),
+Post-Processing of experimental and numerical data. Proer Orthogonal Decompostion: an overview.
+[pdf](http://fluid.ippt.gov.pl/pkor/LIMSI_IPPT/documents/CordierBergmann.pdf).
 
 <a id="6">[6]</a> 
-Rowley, C. (2011).
+Clarence W. **Rowley** (2005).
 Model reduction for fluids, using balanced proper orthogonal decomposition. 
-International Journal of Bifurcation and Chaos 15.
-[doi](  ).
+International Journal of Bifurcation and Chaos. [doi](https://doi.org/10.1142/S0218127405012429).
 
 
 
