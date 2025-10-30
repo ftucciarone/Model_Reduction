@@ -83,19 +83,19 @@ In the following, properties of the proper orthogonal decomposition are listed. 
 		R_{ij\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right)} = \sum_{n=1}^{\infty} \lambda^{(n)} \phi_{i}^{(n)}\left( \boldsymbol{x} \right) \phi_{j}^{\dagger (n)}\left( \boldsymbol{x}^{\prime} \right).
 	```
 * Stemming from the diagonal representation of $R_{ij}$, the decomposition of $\boldsymbol{d}$ on the eigenfunctions $\boldsymbol{\phi}$ and their orthogonality, one has that 
-	```math 
-		\overline{\alpha^{(n)}\alpha^{\dagger(m)}}^{_{X}} = \delta_{nm}\lambda^{(n)},
-	```
-	that means that the coefficients $\alpha^{(n)}$ are mutually uncorrelated and their mean square value are the eignevalues themselves.
+```math 
+	\overline{\alpha^{(n)}\alpha^{\dagger(m)}}^{_{X}} = \delta_{nm}\lambda^{(n)},
+```
+that means that the coefficients $\alpha^{(n)}$ are mutually uncorrelated and their mean square value are the eignevalues themselves.
 * From Mercer's theorem and orthonormality of $\boldsymbol{\phi}^{(n)}$ one can write
-	```math 
-		\sum_{i=1}^{d}\int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \, \mathrm{d}\boldsymbol{x} = 
-		\sum_{n=1}^{\infty} \lambda^{(n)} = E,
-	```
-	where $E$ represents in the case of fluids with velocity field $\boldsymbol{d}$, the Turbulent Kinetic Energy (TKE) integrated over the domain $\Omega$.
+```math 
+	\sum_{i=1}^{d}\int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \, \mathrm{d}\boldsymbol{x} = 
+	\sum_{n=1}^{\infty} \lambda^{(n)} = E,
+```
+where $E$ represents in the case of fluids with velocity field $\boldsymbol{d}$, the Turbulent Kinetic Energy (TKE) integrated over the domain $\Omega$.
 %
 ## Algorithmic approach
-Starting from the the formalism introduced in section \ref{sect:data_decomposition}, the experimental data is organized into a matrix $\boldsymbol{D}_{i,k}$ as explained in equation \eqref{eq:data_structure}. The temporal correlation matrix $\boldsymbol{K}=\boldsymbol{D}^{\dagger}\boldsymbol{D}\in\mathbb{R}^{n_{t}\times n_{t}}$ is then computed as
+Starting from the the formalism introduced in section \ref{sect:data_decomposition}, the experimental data is organized into a matrix $\boldsymbol{D}_{i,k}$ as explained in equation \eqref{eq:data_structure}. The temporal correlation matrix $`\boldsymbol{K}=\boldsymbol{D}^{\dagger}\boldsymbol{D}\in\mathbb{R}^{n_{t}\times n_{t}}`$ is then computed as
 ```math 
 	\boldsymbol{K}_{ij}=\int_{\Omega} \boldsymbol{d}^{\dagger}\left(\boldsymbol{x},t_{i}\right) \boldsymbol{d}\left(\boldsymbol{x},t_{j}\right)\,\mathrm{d}\boldsymbol{x}.
 ```
