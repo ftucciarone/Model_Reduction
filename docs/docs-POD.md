@@ -61,7 +61,7 @@ It is crucial to notice that the temporally averaged quantity corresponds to the
 
 \subsection{Properties of the decomposition}
 In the following, properties of the proper orthogonal decomposition are listed. The proves of these statements are now classical and can be found in the literature.
-	* For a given a bounded domain, Hilbert-Schmidt theory applies and states that the eigenproblem has a denumerable set of solutions satisfying 
+* For a given a bounded domain, Hilbert-Schmidt theory applies and states that the eigenproblem has a denumerable set of solutions satisfying 
 	```math 
 		\sum_{j=1}^{d} \int_{\Omega} R_{ij}\left( \boldsymbol{x}, \boldsymbol{x}^{\prime} \right) \phi_{j}^{(n)} \left( \boldsymbol{x}^{\prime} \right) \mathrm{d}\boldsymbol{x}^{\prime} = \lambda^{(n)} \phi_{i}^{(n)}\left(\boldsymbol{x}\right)
 	```
