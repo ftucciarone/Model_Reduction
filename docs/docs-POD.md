@@ -98,8 +98,9 @@ Starting from the the formalism introduced in section \ref{sect:data_decompositi
 	\boldsymbol{K}_{ij}=\int_{\Omega} \boldsymbol{d}^{\dagger}\left(\boldsymbol{x},t_{i}\right) \boldsymbol{d}\left(\boldsymbol{x},t_{j}\right)\,\mathrm{d}\boldsymbol{x}.
 ```
 The eigen-problem 
-```math \label{eq:eigen_POD}
+```math 
 	\boldsymbol{K} \boldsymbol{\Psi} = \boldsymbol{\Psi} \boldsymbol{\Sigma}
+	\label{eq:eigen_POD}
 ```
 is then solved in order to define the temporal structures $\boldsymbol{\psi}\left(t\right)$. The corresponding spatial structures are then computed by projection of the data on these temporal structures, that means
 ```math 
