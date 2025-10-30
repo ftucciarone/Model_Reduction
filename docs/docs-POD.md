@@ -16,10 +16,8 @@ where the overbar means averaging in some sense. In particular, proper orthogona
 %
 %
 ### Mathematical formulation
-In this section, the development of \workofcite{book:Holmes96}, \workofcite{thesis:Rowley2001} and \workofcite{article:Rowley2011} is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product 
-```math
-	\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}$ and induced norm $\lVert \cdot \rVert_{_{\mathcal{H}}}.
-```
+In this section, the development of \workofcite{book:Holmes96}, \workofcite{thesis:Rowley2001} and \workofcite{article:Rowley2011} is followed, describing the POD procedure in the context of general Hilbert spaces. Let $\mathcal{H}$ be ah Hilbert space with inner product $`\langle \cdot, \cdot \rangle_{_{\mathcal{H}}}`$ and induced norm $`\lVert \cdot \rVert_{_{\mathcal{H}}}`$.
+
 The set of functions $\left\lbrace \boldsymbol{\phi}_{j}\left(\boldsymbol{x}\right) \in \mathcal{H} \:\colon\: j=1,\ldots,n \right\rbrace$ is defined as the one that maximise the $X-$averaged projection of $\boldsymbol{d}$ onto $\boldsymbol{\phi}$, that is
 ```math 
 	\max_{\boldsymbol{\phi}\in\mathcal{H}}
